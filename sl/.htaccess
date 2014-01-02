@@ -1,0 +1,15 @@
+#Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule sitemap.xml index.php?option=sitemap&task=xml&notpl=1
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^.+\.(gif|jpe?g|png|css|dmp|tar|js|html|zip|swf|doc|pdf|ico|txt)$ - [NC,L]
+
+RewriteRule ^.*$ index.php [NC,L]
+
+DirectoryIndex index.php index.html

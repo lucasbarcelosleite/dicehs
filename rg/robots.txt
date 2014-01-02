@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /admin/
+Disallow: /arquivos/
+Disallow: /classes/
+Disallow: /components/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /modules/
+Disallow: /templates/

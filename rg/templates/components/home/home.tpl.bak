@@ -1,0 +1,109 @@
+<!-- BEGIN DESTAQUE_LISTA -->
+<section id="conceitual" class="relative">
+	<header class="hide">
+		<h1>Destaques principais</h1>
+	</header>
+	<div id="carrossel-conceitual">
+		<!-- BEGIN DESTAQUE_ITEM -->
+		<article class="destaque-conceitual" style="background-image:url({destaque_imagem});">
+			<header class="detalhe-conceitual">
+				<hgroup>
+					<h1 class="tit-conceitual">{destaque_titulo}</h1>	
+					<h2 class="subtit-conceitual">{destaque_subtitulo}</h2>	
+				</hgroup>						
+				<a class="sprite link-conheca-destaque" href="{destaque_url}">Conheça a linha completa</a>
+			</header>						
+		</article>
+		<!-- END DESTAQUE_ITEM -->
+	</div>			
+	<ul id="pag-conceitual"></ul>
+</section>	
+<!-- END DESTAQUE_LISTA -->
+
+<article id="newsletter">
+	<div class="relative">							
+		<hgroup>
+			<h1 class="tit-news">Não perca nenhuma promoção</h1>	
+			<h2 class="subtit-news">Cadastre seu email e receba todas nossas novidades e ofertas</h2>	
+		</hgroup>
+		<button id="close-news" class="bt-fechar-news sprite ir" type="button" title="Fechar">Fechar</button>
+		<form id="form-news" class="form-news" action="{news_action}" method="post">
+			<input class="field-news sprite validate[required,custom[email]]" type="text" name="email" placeholder="Digite seu email aqui" title="Digite seu email aqui">
+			<button class="bt-default aux right" type="submit" title="Clique aqui para se cadastrar"><span class="bg-right"><span class="bg-body">Cadastrar</span></span></button>
+			<br class="clear">
+		</form>
+	</div>
+</article>
+
+<div class="wrapper destaques">
+	<section id="destaques">
+		<header class="header-destaques">
+			<hgroup>
+				<h1 class="tit-destaques">Destaques H-Moveis</h1>
+				<h2 class="subtit-destaques">Móveis planejados e prontos, para tornar sua casa ainda mais aconchegante</h2>	
+			</hgroup>
+			<aside id="filtro" class="filtro-destaques">
+				<h1 class="tit-filtro-destaques">Filtrar por Ambiente</h1>
+				
+				<!-- BEGIN AMBIENTE_ITEM -->
+				<label class="label-check sprite" for="filtro-{ambiente_id}">
+					<input name="ambiente[]" id="filtro-{ambiente_id}" value="{ambiente_id}" type="checkbox"> {ambiente_nome}
+				</label>
+				<!-- END AMBIENTE_ITEM -->
+			</aside>
+		</header>
+
+		<!-- Retorno do Ajax -->
+		<section id="produto-lista">
+			{produto_lista}
+		</section>
+		
+	</section>
+
+	<div class="size-3-4 left">
+		<section class="box-default">
+			<header>
+				<h1 class="tit-box-mod1">Novidades</h1>
+			</header>
+			<ul class="list-news">
+				<!-- BEGIN NOTICIA_ITEM -->
+				<li>
+					<p><a href="{noticia_url}">{noticia_titulo}</a></p>
+					<p><time datetime="{noticia_data}" pubdate="{noticia_data}">{noticia_data_extenso}</time></p>					
+				</li>
+				<!-- END NOTICIA_ITEM -->
+			</ul>
+			<footer class="clearfix">
+				<a class="bt-default" href="{url_todas_noticias}"><span class="bg-right"><span class="bg-body">Ver mais novidades</span></span></a>
+			</footer>
+		</section>	
+	</div>
+
+	<div class="size-1-4 left last">
+		<aside class="box-default">
+			<header>
+				<hgroup>
+					<h1 class="tit-box-mod2">Visite Nossa loja</h1>	
+					<h2 class="subtit-box-mod1">Lorem Ipsum Dolor Sit Amet</h2>	
+				</hgroup>						
+			</header>
+			<img class="mg-bottom2" src="{dir_img}/others/fake01.jpg" width="190" height="100" alt="">
+			<footer class="clearfix">
+				<a class="bt-default" href="#"><span class="bg-right"><span class="bg-body">Ver endereço</span></span></a>
+			</footer>
+		</aside>
+		<aside class="box-default">
+			<header>
+				<hgroup>
+					<h1 class="tit-box-mod2">Acompanhar pedido</h1>
+					<h2 class="subtit-box-mod1">Lorem Ipsum Dolor Sit Amet</h2>
+				</hgroup>						
+			</header>
+			<img class="mg-bottom2" src="{dir_img}/others/fake01.jpg" width="190" height="100" alt="">
+			<footer class="clearfix">
+				<a class="bt-default" href="#"><span class="bg-right"><span class="bg-body">Acompanhar pedido</span></span></a>
+			</footer>
+		</aside>
+	</div>
+	<br class="clear">
+</div>
