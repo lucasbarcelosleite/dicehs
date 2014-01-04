@@ -33,6 +33,27 @@
     <!-- END DESTAQUES_MOD_3 -->       
 </section>
 
+<!-- BEGIN SPOILER_CONTAINER -->
+<div class="container">
+    <div class="section_header">
+        <h3>Zona de Spoilers</h3>
+    </div>   
+
+    <!-- BEGIN SPOILER_ITEM -->
+    <div class="row feature lista-destacada">
+        <div class="span3">
+            <a href="{edicao_link}"><img src="{edicao_img}" /></a>
+        </div>
+        <div class="span9">
+            <h3><a href="{edicao_link}">{edicao_nome}</a></h3>
+            <p><a href="{edicao_link}">Clique, confira os Spoilers de {edicao_nome} e d&ecirc; sua opini&atilde;o!</a></p>
+        </div>
+    </div>
+    <!-- END SPOILER_ITEM -->        
+</div>
+
+<!-- END SPOILER_CONTAINER -->
+
 <!-- BEGIN EVENTO_1_CONTAINER -->
 <div id="showcase">
     <div class="container">

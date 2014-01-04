@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{dir_css}/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="{dir_css}/theme.css">
     <link rel="stylesheet" type="text/css" href="{dir_css}/index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{dir_css}/jquery.fancybox.css">
 
     <link rel="icon" type="image/ico" href="{dir_img}/favicon.ico">
 
@@ -40,6 +41,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
+    <!-- BEGIN HEADER -->
     <div class="navbar transparent navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -68,6 +70,7 @@
         </div>
       </div>
     </div>
+    <!-- END HEADER -->    
 
     <!-- BEGIN STR_HOME -->
     {main_body}
@@ -88,8 +91,7 @@
     </div>
     <!-- END STR_INTERNA -->
 
-
-    <!-- starts footer -->
+    <!-- BEGIN FOOTER -->
     <footer id="footer">
         <div class="container">
             <div class="row sections">
@@ -126,12 +128,14 @@
             </div>
         </div>
     </footer>
+    <!-- END FOOTER -->
 
     <!-- Scripts -->
     <script type="text/javascript" src="{dir_js}/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="{dir_js}/bootstrap.min.js"></script>
     <script type="text/javascript" src="{dir_js}/theme.js"></script>
     <script type="text/javascript" src="{dir_js}/index-slider.js"></script>	
+    <script type="text/javascript" src="{dir_js}/jquery.fancybox.pack.js"></script> 
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

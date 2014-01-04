@@ -2,6 +2,8 @@
 
 $tpl = new WTemplate(WPath::tpl());
 
+
+
 // ========================================================================================
 // DESTAQUE
 // ========================================================================================
@@ -21,6 +23,23 @@ foreach ($rows as $row) {
 
 	$tpl->imagem = WPath::arquivo("home_".$row->imagem,"destaque");
 	$tpl->parseBlock("DESTAQUES_MOD_".$mod);
+}
+
+
+// ========================================================================================
+// ZONA DE SPOILERS
+// ========================================================================================
+$edicao = new Edicao();
+$rows = $edicao->select("where is_spoiler = 1");
+
+if (count($rows)) {
+	foreach ($rows as $row) {
+		$tpl->edicao_nome = $row->nome;
+		$tpl->edicao_img = WPath::arquivo("home_".$row->imagem,"edicao");
+		$tpl->edicao_link = WSEOUrl::format("index.php?option=spoiler&edicao=".$row->id_edicao."&Itemid=7");
+		$tpl->parseBlock("SPOILER_ITEM");
+	}
+	$tpl->parseBlock("SPOILER_CONTAINER");
 }
 
 // ========================================================================================
