@@ -35,5 +35,11 @@ insert into `rg_menu` (`id_menu`, `titulo`, `link`, `publicado`, `parent`, `orde
 
 UPDATE `rg_menu` SET `link`='index.php?option=spoiler&edicao=1', `ordering`='5' WHERE `id_menu`='7';
 UPDATE `rg_menu` SET `ordering`='6' WHERE `id_menu`='6';
-UPDATE `dhs`.`rg_menu` SET `titulo`='Notícias' WHERE `id_menu`='3';
-UPDATE `dhs`.`rg_menu` SET `titulo`='Rankings' WHERE `id_menu`='5';
+
+insert into `sl_menu_admin` (`id_menu_admin`, `titulo`, `link`, `parent`, `ordering`, `publicado`) values ('18', 'Spoilers', 'option=spoiler', '0', '16', '1');
+insert into `sl_menu_admin` (`id_menu_admin`, `titulo`, `link`, `parent`, `ordering`, `publicado`) values ('19', 'Cards', 'option=spoiler', '18', '16', '1');
+
+insert into `sl_menu` (`id_menu`, `titulo`, `link`, `publicado`, `parent`, `ordering`) values ('7', 'Spoilers', 'option=spoiler', '1', '1', '9');
+
+UPDATE `sl_menu` SET `link`='index.php?option=spoiler&edicao=1', `ordering`='5' WHERE `id_menu`='7';
+UPDATE `sl_menu` SET `ordering`='6' WHERE `id_menu`='6';

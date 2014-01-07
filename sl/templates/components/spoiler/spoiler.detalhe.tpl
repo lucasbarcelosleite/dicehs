@@ -8,7 +8,7 @@
 <div class="row">
     <div class="span4">
         <img src="{imagem}" />
-        <br />
+        <br /><br />
         <div class="fb-like" data-href="{pg_detalhe}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
     </div>
     <div class="span8">
