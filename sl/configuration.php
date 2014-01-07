@@ -3,11 +3,11 @@
 error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE ^ E_DEPRECATED);
 ini_set("default_charset", "iso-8859-1");
 
-define("SHARE_DIR_PROJ", "/dice/");
+define("SHARE_DIR_PROJ", "/dicehs/");
 define("SHARE_LIVE", "http://".$_SERVER["HTTP_HOST"] . SHARE_DIR_PROJ);
 define("SHARE_ROOT", $_SERVER["DOCUMENT_ROOT"] . SHARE_DIR_PROJ);
 
-define("DIR_PROJ", "/dice/sl/");
+define("DIR_PROJ", "/dicehs/sl/");
 define("LIVE", "http://".$_SERVER["HTTP_HOST"] . DIR_PROJ);
 define("ROOT", $_SERVER["DOCUMENT_ROOT"] . DIR_PROJ);
 define("NAME_ADMIN", "admin");

@@ -5,7 +5,9 @@ $tpl = new WTemplate(WPath::tpl("_principal"));
 $menu = new Menu();
 $menu->load(WMain::$Itemid);
 
-if ($menu->id_menu == 1) {
+$isModal = ((WMain::$option == "spoiler")and(pega("id"))and(!(pega("act"))));
+
+if (($menu->id_menu == 1) or ($isModal)) {
 	$tpl->css_menu = "str-home";
 	$tpl->parseBlock("STR_HOME");
 } else {
@@ -23,6 +25,10 @@ foreach ($rows as $row) {
 	$tpl->parseBlock("MENU_ITEM");
 }
 
+if (!($isModal)) {
+	$tpl->parseBlock("HEADER");
+}
+
 $conteudo = new Conteudo();
 $tpl->endereco_dice = $conteudo->getHtmlByChave("endereco_dice");
 
@@ -35,6 +41,10 @@ $tpl->og_description = htmlentities(WMain::$facebookTags["descricao"]);
 $tpl->og_image 		 = WMain::$facebookTags["imagem"];
 $tpl->og_url 		 = WSEOUrl::getUrlAtual();
 $tpl->site_name 	 = WConfig::$siteName;
+
+if (!($isModal)) {
+	$tpl->parseBlock("FOOTER");
+}
 
 $tpl->show();
 
