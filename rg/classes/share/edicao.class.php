@@ -7,6 +7,7 @@ class Edicao extends WModel {
 	var $nome = null;
 	var $nome_pt = null;
 	var $is_spoiler = null;
+	var $is_home = null;
 	var $imagem = null;
 
 	function  __construct() {

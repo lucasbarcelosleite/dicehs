@@ -30,7 +30,7 @@ foreach ($rows as $row) {
 // ZONA DE SPOILERS
 // ========================================================================================
 $edicao = new Edicao();
-$rows = $edicao->select("where is_spoiler = 1");
+$rows = $edicao->select("where is_spoiler = 1 and is_home = 1");
 
 if (count($rows)) {
 	foreach ($rows as $row) {

@@ -43,3 +43,10 @@ insert into `sl_menu` (`id_menu`, `titulo`, `link`, `publicado`, `parent`, `orde
 
 UPDATE `sl_menu` SET `link`='index.php?option=spoiler&edicao=1', `ordering`='5' WHERE `id_menu`='7';
 UPDATE `sl_menu` SET `ordering`='6' WHERE `id_menu`='6';
+
+alter table `share_edicao` add column `is_home` int(11) default 0;
+update `share_edicao` set `is_home` = 1;
+
+insert into `share_edicao` (`id_edicao`,`sigla`,`nome`,`is_spoiler`) values (2,'M15', 'Magic 2015', 1);
+
+alter table `share_edicao` add column `texto` text;
