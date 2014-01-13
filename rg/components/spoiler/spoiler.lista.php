@@ -14,9 +14,9 @@ if (count($rowsEdicao)) {
 		$tpl->edicao_nome = $edicao->nome;
 		$tpl->edicao_texto = $edicao->texto;
 
-		WMain::$facebookTags["titulo"] = "Spoilers ".$edicao->nome;
-		WMain::$facebookTags["descricao"] = "Confira os spoilers de ". $edicao->nome. " e d&ecirc; sua opini&atilde;o sobre as cartas da pr&oacute;xima edi&ccedil;&atilde;o!";
-		WMain::$facebookTags["imagem"] = WPath::arquivo("home_".$edicao->imagem,"edicao");
+		if ($edicao->imagem) {
+			WMain::$facebookTags["imagem"] = WPath::arquivo("home_".$edicao->imagem,"edicao");
+		}
 
 		// ========================================================================================
 		// PROXIMOS
